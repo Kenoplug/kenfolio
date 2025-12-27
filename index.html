@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crypto Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="authBox">
+  <h2>Login / Register</h2>
+  <input id="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <button id="loginBtn">Login</button>
+  <button id="registerBtn">Register</button>
+</div>
+
+<div id="app" style="display:none">
+  <h1>Crypto Portfolio</h1>
+
+  <div class="top-actions">
+    <button id="logoutBtn">Logout</button>
+    <button id="resetBtn" class="danger">Reset Portfolio</button>
+  </div>
+
+  <div class="summary">
+    <span>Total Invested: <b id="invested">$0</b></span>
+    <span>Current Value: <b id="current">$0</b></span>
+    <span>Total PnL: <b id="totalPnl">$0</b></span>
+  </div>
+
+  <form id="txForm">
+    <input id="coin" placeholder="Coin ID (bitcoin)" required>
+    <input id="quantity" type="number" step="any" placeholder="Quantity" required>
+    <input id="price" type="number" step="any" placeholder="Price ($)" required>
+    <select id="type">
+      <option value="buy">Buy</option>
+      <option value="sell">Sell</option>
+    </select>
+    <button type="submit">Add Transaction</button>
+  </form>
+
+  <h2>Holdings</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Coin</th>
+        <th>Qty</th>
+        <th>Avg Buy</th>
+        <th>Current</th>
+        <th>PnL</th>
+      </tr>
+    </thead>
+    <tbody id="portfolioTable"></tbody>
+  </table>
+
+  <h2>Transaction History</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Coin</th>
+        <th>Type</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="transactionTable"></tbody>
+  </table>
+</div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>

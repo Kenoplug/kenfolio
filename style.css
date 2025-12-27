@@ -1,0 +1,46 @@
+body {
+  background: #020617;
+  color: #e5e7eb;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+input, select, button {
+  padding: 8px;
+  margin: 4px;
+}
+
+button {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.danger {
+  background: #ef4444;
+  color: white;
+}
+
+.summary {
+  margin: 15px 0;
+  display: flex;
+  gap: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+th, td {
+  border-bottom: 1px solid #1e293b;
+  padding: 8px;
+  text-align: center;
+}
+
+.profit { color: #22c55e; }
+.loss { color: #ef4444; }
+
+.top-actions {
+  margin-bottom: 15px;
+}
